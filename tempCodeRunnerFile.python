@@ -1,0 +1,14 @@
+w=[]
+a,b=map(int,input().split())
+if a<b:
+    l=list(range(a+1,b,1))
+    for x in l:
+        w.append(x)
+    print(len(w))
+    print(*l)
+else:
+    l=list(range(b+1,a,1))
+    for x in l:
+        w.append(x)
+    print(len(w))
+    print(*l)
