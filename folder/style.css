@@ -230,3 +230,57 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
 }
+
+/* --- 모바일 반응형 설정 (화면 너비 768px 이하일 때 적용) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. 헤더: 로고와 메뉴를 위아래로 배치 */
+    .header {
+        flex-direction: column; /* 가로 정렬 -> 세로 정렬 변경 */
+        padding: 1rem; /* 여백 줄임 */
+        gap: 15px; /* 로고와 메뉴 사이 간격 */
+    }
+
+    /* 2. 네비게이션 메뉴 조정 */
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* 메뉴 가운데 정렬 */
+        flex-wrap: wrap; /* 메뉴가 많으면 다음 줄로 넘김 */
+        gap: 15px; /* 메뉴 사이 간격 */
+    }
+
+    .nav a {
+        margin-left: 0; /* 기존 PC용 왼쪽 여백 제거 */
+        font-size: 0.95rem; /* 글자 크기 살짝 조정 */
+        padding: 5px; /* 터치하기 편하게 영역 확보 */
+    }
+
+    /* 3. 메인 영역 여백 최적화 */
+    .main {
+        padding: 30px 15px; /* PC보다 좁은 여백 */
+    }
+
+    /* 4. 카드 디자인: 좁은 화면에 맞게 내부 여백 줄임 */
+    .card {
+        padding: 25px; /* 40px -> 25px로 축소 */
+        width: 100%; /* 화면 꽉 차게 */
+    }
+
+    /* 5. 버튼 크기 조정 */
+    .btn {
+        width: 100%; /* 버튼을 카드 너비만큼 꽉 차게 (터치하기 좋음) */
+        padding: 15px 0;
+    }
+
+    /* 6. 연락처 항목 (Contact 페이지) 세로 정렬 */
+    .contact-item {
+        flex-direction: column; /* 아이콘 위, 글자 아래 */
+        text-align: center;
+    }
+
+    .contact-item .icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
